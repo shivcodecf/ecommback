@@ -27,7 +27,7 @@ const Signup = () => {
     };
 
     await axios
-      .post("/user/signup", userInfo)
+      .post("https://ecoommerceback.onrender.com/user/signup", userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
