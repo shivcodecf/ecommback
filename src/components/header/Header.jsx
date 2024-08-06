@@ -48,15 +48,15 @@ const Navbar = () => {
       <li><NavLink to = "/Product" className="nav_">Products</NavLink></li>
       <li><NavLink to = "/Contact" className="nav_">Contact</NavLink></li> 
 
-      {
-         authUser ?   <li><NavLink to = "/Signup" classNameName="nav_ nav_login">SIGNUP</NavLink></li>     : <li><NavLink to = "/Login" classNameName="nav_ nav_login">Login</NavLink></li>  
-      }
-       
-       
-       
-       {authUser && (
-                <li><Logout /></li>
-              )}
+      
+      {!authUser ? (
+        <>
+          <li><NavLink to="/Signup" className="nav_ nav_login">SIGNUP</NavLink></li>
+          <li><NavLink to="/Login" className="nav_ nav_login">Login</NavLink></li>
+        </>
+      ) : (
+        <li><Logout /></li>
+      )}
       
 
          
